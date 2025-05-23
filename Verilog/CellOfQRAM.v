@@ -5,7 +5,7 @@ module CellOfQRAM(
     input ReadEdge,
     input inputData,
     input WriteEdge
-  );
+);
     tri outputData;
     tri ReadEdge;
     tri inputData;
