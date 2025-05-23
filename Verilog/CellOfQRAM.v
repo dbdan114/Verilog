@@ -46,5 +46,5 @@ module CellOfQRAM(
 
     assign East=South;
 
-    _nmos Read(outputData, East, WriteEdge);
+    _nmos Write(outputData, East, WriteEdge);
 endmodule
