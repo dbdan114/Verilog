@@ -24,7 +24,7 @@ module CellOfQRAM(
     trireg NorthToSouth2;
     trireg SouthToNorth2;
     
-    _nmos Read(West, inputData, ReadEdge);
+    _nmos Write(West, inputData, WriteEdge);
     
     assign North=West;
 
@@ -46,5 +46,5 @@ module CellOfQRAM(
 
     assign East=South;
 
-    _nmos Write(outputData, East, WriteEdge);
+    _nmos Read(outputData, East, ReadEdge);
 endmodule
