@@ -36,5 +36,6 @@ module OscilateFromXtalDDR(
     
     assign North=SouthToNorth2;
     
-    _buf
+    _buf(ClockP,PulledDigit,North);
+    _buf(ClockN,PulledDigit,South);
 endmodule
