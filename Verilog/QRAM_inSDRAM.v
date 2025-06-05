@@ -45,8 +45,8 @@ module QRAM_inSDRAM (
     CellOfQRAM ForAddressQBit(EastForAddressQBit, DualEdgeClockForAddressQbit, WestForAddressQBit, DualEdgeClockForAddressQbit);
     CellOfQRAM ForDataQBit(EastForDataQBit, DualEdgeClockReadForDataQBit, WestForDataQBit, DualEdgeClockWriteForDataQBit);
 
-    DifferentialQBit(EastForAddressQBit, WestForDataQBit);
-    DifferentialQBit(EastForDataQBit, WestForAddressQBit);
+    DifferentialQBit ShakeAddressQBit(EastForAddressQBit, WestForDataQBit);
+    DifferentialQBit IndexDataQBit(EastForDataQBit, WestForAddressQBit);
     
     assign outputQBit = EastForDataQBit;
     
