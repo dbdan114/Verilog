@@ -18,7 +18,7 @@ module OscilateFromXtalDDR(
     reg ClockP;
     reg ClockN;
 
-    DifferentialQBit(North,South);
+    DifferentialQBit Rectify(North,South);
     
     _buf(ClockP,PullDigit,North);
     _buf(ClockN,PullDigit,South);
