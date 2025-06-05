@@ -44,59 +44,10 @@ module QRAM_inSDRAM (
 
     CellOfQRAM ForAddressQBit(EastForAddressQBit, DualEdgeClockForAddressQbit, WestForAddressQBit, DualEdgeClockForAddressQbit);
     CellOfQRAM ForDataQBit(EastForDataQBit, DualEdgeClockReadForDataQBit, WestForDataQBit, DualEdgeClockWriteForDataQBit);
+
+    DifferentialQBit(EastForAddressQBit, WestForDataQBit);
+    DifferentialQBit(EastForDataQBit, WestForAddressQBit);
     
-endmodule
-
-module and_B_to_A(
-
-    output outputData,
-    input [1:0] DigitSupply,
-    input A,
-
-    input B
-    );
-    wire outputData;
-    tri [1:0] DigitSupply;
-    tri A;
-
-    tri B;
-
-   
-
-    _pmos For0(outputData,DigitSupply[0], B);
-    _nmos For1(outputData,A, B);
+    assign outputQBit = EastForDataQBit;
     
-endmodule
-
-module CellOfQRAM(
-    output outputData,
-    input ReadEdge,
-    input inputData,
-    input WriteEdge
-);
-    tri outputData;
-    tri ReadEdge;
-    tri inputData;
-    tri WriteEdge;
-
-    tri West;
-    
-    tri North;
-    tri South;
-
-    tri East;
-
-    _nmos Write(West, inputData, WriteEdge);
-    
-    assign North=West;
-
-    assign South=West;
-
-    DifferentialQBit UseQBit(North,South);
-    
-    assign East=North;
-
-    assign East=South;
-
-    _nmos Read(outputData, East, ReadEdge);
 endmodule
