@@ -18,30 +18,14 @@ module CellOfQRAM(
 
     tri East;
 
-    tri NorthToSouth1;
-    tri SouthToNorth1;
-
-    trireg NorthToSouth2;
-    trireg SouthToNorth2;
-    
     _nmos Write(West, inputData, WriteEdge);
     
     assign North=West;
 
     assign South=West;
 
-    _nmos ChargeNorth(NorthToSouth1, North, Vdd);
-
-    _nmos ChargeSouth(SouthToNorth1, South, Vdd);
-
-    assign NorthToSouth2=NorthToSouth1;
-
-    assign SouthToNorth2=SouthToNorth1;
-
-    assign South=NorthToSouth2;
+    DifferentialQBit UseQBit(North,South);
     
-    assign North=SouthToNorth2;
-
     assign East=North;
 
     assign East=South;
