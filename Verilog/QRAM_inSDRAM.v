@@ -5,10 +5,30 @@ module QRAM_inSDRAM (
     input Read,
     input inputQBit,
     input Write,
+    input AddressQBit,
     input DDRClockP,
     input DDRClockN
 );
 
+    tri PosEdgeClockForAddressQbit;
+    tri NegEdgeClockForAddressQbit;
+    tri DualEdgeClockForAddressQbit;
+
+    tri PosEdgeClockForDataQBit;
+    tri NegEdgeClockForDataQBit;
+    tri DualEdgeClockForDataQBit;
+
+    tri DualEdgeClockReadForDataQBit;
+    tri DualEdgeClockWriteForDataQBit;
+    
+    tri WestForAddressQBit;
+    tri EastForAddressQBit;
+
+    tri WestForDataQBit;
+    tri EastForDataQBit;
+
+    
+    
 endmodule
 
 module CellOfQRAM(
