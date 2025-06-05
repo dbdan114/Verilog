@@ -27,14 +27,14 @@ module QRAM_inSDRAM (
     tri WestForDataQBit;
     tri EastForDataQBit;
 
-    PosEdge PosEdgeClockForAddress(PosEdgeClockForAddressQbit, ChargedSupplyDigit, DDRClockN);
-    PosEdge PosEdgeClockForData(PosEdgeClockForDataQBit, ChargedSupplyDigit, DDRClockP);
+    PosEdge PosEdgeClockForAddress(PosEdgeClockForAddressQbit, PullDigit, DDRClockN);
+    PosEdge PosEdgeClockForData(PosEdgeClockForDataQBit, PullDigit, DDRClockP);
 
-    NegEdge
+    NegEdge NegEdgeClockForAddress(NegEdgeClockForAddressQbit, PullDigit, DDRClockN);
+    NegEdge NegEdgeClockForData(NegEdgeClockForDataQBit, PullDigit, DDRClockP);
     
-    PosEdge MakeNegEdge(NegEdgeClock, ChargedSupplyDigit, nClock);
-
-    or_B_to_A MakeDualEdge(DualEdgeClock , ChargedSupplyDigit, NegEdgeClock, PosEdgeClock);
+    or_B_to_A MakeDualEdgeClockForAddress(DualEdgeClockForAddressQbit, SupplyDigit, PosEdgeClockForAddressQbit, NegEdgeClockAddressQbit);
+    or_B_to_A MakeDualEdgeClockForData(DualEdgeClockForDataQbit, SupplyDigit, PosEdgeClockForDataQBit, NegEdgeClockForDataQBit);
     
 endmodule
 
