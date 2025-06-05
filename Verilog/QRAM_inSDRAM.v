@@ -27,14 +27,44 @@ module QRAM_inSDRAM (
     tri WestForDataQBit;
     tri EastForDataQBit;
 
-    PosEdge PosEdgeClockForAddress(PosEdgeClockForAddressQbit, PullDigit, DDRClockN);
-    PosEdge PosEdgeClockForData(PosEdgeClockForDataQBit, PullDigit, DDRClockP);
+    assign WestForAddressQBit = AddressQBit;
+    assign WestForDataQBit = inputQBit;
+    
+    PosEdge MakePosEdgeClockForAddress(PosEdgeClockForAddressQbit, PullDigit, DDRClockN);
+    PosEdge MakePosEdgeClockForData(PosEdgeClockForDataQBit, PullDigit, DDRClockP);
 
-    NegEdge NegEdgeClockForAddress(NegEdgeClockForAddressQbit, PullDigit, DDRClockN);
-    NegEdge NegEdgeClockForData(NegEdgeClockForDataQBit, PullDigit, DDRClockP);
+    NegEdge MakeNegEdgeClockForAddress(NegEdgeClockForAddressQbit, PullDigit, DDRClockN);
+    NegEdge MakeNegEdgeClockForData(NegEdgeClockForDataQBit, PullDigit, DDRClockP);
     
     or_B_to_A MakeDualEdgeClockForAddress(DualEdgeClockForAddressQbit, SupplyDigit, PosEdgeClockForAddressQbit, NegEdgeClockAddressQbit);
     or_B_to_A MakeDualEdgeClockForData(DualEdgeClockForDataQbit, SupplyDigit, PosEdgeClockForDataQBit, NegEdgeClockForDataQBit);
+
+    and_B_to_A MakeDualEdgeClockReadForDataQBit(DualEdgeClockReadForDataQBit, PullDigit, DualEdgeClockForDataQBit, Read);
+    and_B_to_A MakeDualEdgeClockWriteForDataQBit(DualEdgeClockWriteForDataQBit, PullDigit, DualEdgeClockForDataQBit, Write);
+
+    CellOfQRAM ForAddressQBit(EastForAddressQBit, DualEdgeClockForAddressQbit, WestForAddressQBit, DualEdgeClockForAddressQbit);
+    CellOfQRAM ForDataQBit(EastForDataQBit, DualEdgeClockReadForDataQBit, WestForDataQBit, DualEdgeClockWriteForDataQBit);
+    
+endmodule
+
+module and_B_to_A(
+
+    output outputData,
+    input [1:0] DigitSupply,
+    input A,
+
+    input B
+    );
+    wire outputData;
+    tri [1:0] DigitSupply;
+    tri A;
+
+    tri B;
+
+   
+
+    _pmos For0(outputData,DigitSupply[0], B);
+    _nmos For1(outputData,A, B);
     
 endmodule
 
