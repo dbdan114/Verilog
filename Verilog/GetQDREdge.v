@@ -4,5 +4,11 @@ module GetQDREdge
   input ClockP,
   input ClockN
 );
+  tri QDREdge;
+  tri ClockP;
+  tri ClockN;
+
+  DiffenentialQbit ClockPtoEdge(ClockP,QDREdge);
+  DiffenentialQbit ClockNtoEdge(ClockN,QDREdge);
   
 endmodule
