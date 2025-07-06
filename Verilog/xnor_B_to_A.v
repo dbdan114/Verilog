@@ -4,7 +4,7 @@ module xnor_B_to_A(
     input A,
     input B
     );
-    reg outputData;
+    tri outputData;
     tri [1:0] DigitSupply;
     tri A;
     tri B;
