@@ -1,16 +1,22 @@
 module xnor_B_to_A(
     output outputData,
+    input [1:0] DigitSupply,
     input A,
     input B
     );
+    reg outputData;
+    tri [1:0] DigitSupply;
+    tri A;
+    tri B;
+    
     tri TempNor;
     tri TempAnd;
     
 
-    _nor #(.INPUT_WIDTH(2)) GetNor(TempNor,{B,A});
-    _and #(.INPUT_WIDTH(2)) GetAnd(TempAnd,{B,A});
+    _nor #(.INPUT_WIDTH(2)) GetNor(TempNor,DigitSupply,{B,A});
+    _and #(.INPUT_WIDTH(2)) GetAnd(TempAnd,DigitSupply,{B,A});
     
-    _or #(.INPUT_WIDTH(2)) GetXNor(outputData, {TempAnd,TempNor});
+    _or #(.INPUT_WIDTH(2)) GetXNor(outputData,DigitSupply,{TempAnd,TempNor});
 
 
 endmodule
