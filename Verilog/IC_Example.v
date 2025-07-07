@@ -22,7 +22,7 @@ module IC_Example (
     assign QRAM_DDRClockN = QBitToWrite;
     GetQDREdge MakeEdge(QBitToWrite, QRAM_DDRClockP, QRAM_DDRClockN);
     GetQDREdge MakeEdge(AddressQBit, QRAM_DDRClockP, QRAM_DDRClockN);
-    DifferentialQBit ClockToQDR(QRAM_DDRClockN,QRAM_DDRClockP);
+    DifferentialQBit AddressQBitToQDR(QRAM_DDRClockN,QRAM_DDRClockP);
     /* To Write Your HDL Code*/
     
   
