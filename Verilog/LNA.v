@@ -1,3 +1,9 @@
+module _nmos(
+    output outputData,
+    input inputData,
+    input Control
+    );
+
 
 module LNA
 (
@@ -5,7 +11,7 @@ module LNA
   input EnaleReceive,   // Approximately 2.1 V
   input Transmit,
   input EnableTransmit, // Approximately 2.1 V
-  input Antenna
+  inout Antenna
 );
   tri Receive;
   tri EnaleReceive;
@@ -14,6 +20,11 @@ module LNA
   tri Antenna;
 
   tri TempTranmit;
+  tri TempReceive;
 
-  _nmos
+  _nmos ChargeTransmit(TempTranmit, Transmit, EnableTransmit);
+  DifferentialQbit TransmitTemp(TempTranmit, Antenna);
+  DifferentialQbit ReceiveTemp(Antenna, TempReceive);
+  _nmos ChargeReceive(Receive, TempReceive, EnableTransmit);
+endmodule
   
