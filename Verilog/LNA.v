@@ -1,10 +1,3 @@
-module _nmos(
-    output outputData,
-    input inputData,
-    input Control
-    );
-
-
 module LNA
 (
   output Receive,
