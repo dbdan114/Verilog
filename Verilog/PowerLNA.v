@@ -23,5 +23,7 @@ module PowerLNA
   DifferentialQBit MakePullSignal0(SupplyDigit[0], PullDigit[0]);
 
   DifferentialQBit GetInOutSignal(TempJunction, SupplyDigit[1]);
+
+  LNA CheckSignal(Receive, EnaleReceive, Transmit, EnableTransmit, TempJunction); 
   
 endmodule  
