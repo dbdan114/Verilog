@@ -1,3 +1,4 @@
+
 `include "DigitSupply.vh"
 
 module PowerLNA
@@ -12,5 +13,9 @@ module PowerLNA
   tri EnaleReceive;
   tri Transmit;
   tri EnableTransmit;
+
+  DifferentialQBit MakeSupplySignal0(SupplyDigit[1], SupplyDigit[1]);
+  DifferentialQBit MakeSupplySignal1(SupplyDigit[1], SupplyDigit[0]);
+  
   
 endmodule  
