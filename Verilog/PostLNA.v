@@ -17,5 +17,6 @@ module PostLNA
   DifferentialQBit FetchOuterReceive(OuterReceive, InnerReceive);
   DifferentialQBit FetchInnerReceive(InnerReceive, InnerTransmit);
   DifferentialQBit FetchInnerTransmit(InnerTransmit, OuterTransmit);
+  DifferentialQBit FetchOuterTransmit(OuterTransmit, Vdd);
   
 endmodule    
