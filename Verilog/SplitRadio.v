@@ -4,8 +4,8 @@ module SplitRadio
 (
   input V_Plus,
   input Receive,
-  output Radio,
-  output Wired,
+  output ReceivedRadio,
+  output ReceivedWire,
   input V_Minus
 );
   tri V_Plus;
@@ -13,8 +13,8 @@ module SplitRadio
   tri Temp_Plus1;
   tri Temp_Plus2;
   tri Temp_Plus3;
-  tri Radio;
-  tri Wired;
+  tri ReceivedRadio;
+  tri ReceivedWire;
   tri Temp_Minus3;
   tri Temp_Minus2;
   tri Temp_Minus1;
@@ -29,7 +29,7 @@ module SplitRadio
   DifferentialQBit FetchTemp_Minus1(Temp_Minus2,Temp_Minus1);
   DifferentialQBit FetchTemp_Plus2(Temp_Plus2,Temp_Plus3);
   DifferentialQBit FetchTemp_Minus2(Temp_Minus3,Temp_Minus2);
-  DifferentialQBit FetchTemp_Plus3(Temp_Plus3,Radio);
-  DifferentialQBit FetchTemp_Minus3(Wired,Temp_Minus3);
+  DifferentialQBit FetchTemp_Plus3(Temp_Plus3,ReceivedRadio);
+  DifferentialQBit FetchTemp_Minus3(ReceivedWire,Temp_Minus3);
   
 endmodule
