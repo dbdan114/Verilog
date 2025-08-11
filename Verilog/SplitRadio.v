@@ -31,5 +31,7 @@ module SplitRadio
   DifferentialQBit FetchTemp_Minus2(Temp_Minus3,Temp_Minus2);
   DifferentialQBit FetchTemp_Plus3(Temp_Plus3,ReceivedRadio);
   DifferentialQBit FetchTemp_Minus3(ReceivedWire,Temp_Minus3);
+
+  DifferentialQBit ConnectVdd(SupplyDigit[1], NoConnect);
   
 endmodule
