@@ -6,5 +6,6 @@ module MakeVoltPN
   output V_Minus
 );
 
+  tri [1:0] TempSupplyDigit = SupplyDigit;
   
 endmodule
