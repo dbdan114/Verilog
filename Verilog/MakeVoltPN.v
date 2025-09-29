@@ -1,5 +1,10 @@
 `include "DigitSupply.vh"
 
 module MakeVoltPN
-  (
-    output 
+(
+  output V_Plus,
+  output V_Minus
+);
+
+  
+endmodule
