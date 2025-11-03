@@ -17,4 +17,6 @@ module CellOfQSRAM
   tri RefreshEdge;
 
   
+  
+  _buf MakeInputToSupplyStrength(PreDataToWrite,SupplyDigit,inputData);
 endmodule
