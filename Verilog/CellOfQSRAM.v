@@ -1,4 +1,6 @@
+`include "DigitSupply.vh"
 
+module CellOfQSRAM
 (
   output outputData,
   input ReadEdge,
@@ -8,3 +10,5 @@
   input RefreshEdge
     
 );
+
+endmodule
