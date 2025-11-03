@@ -10,5 +10,11 @@ module CellOfQSRAM
   input RefreshEdge
     
 );
+  tri outputData;
+  tri ReadEdge;
+  tri inputData;
+  tri WriteEdge;
+  tri RefreshEdge;
 
+  
 endmodule
