@@ -6,7 +6,6 @@ module CellOfQSRAM
   input ReadEdge,
   input inputData,
   input WriteEdge,
-    
   input RefreshEdge
     
 );
