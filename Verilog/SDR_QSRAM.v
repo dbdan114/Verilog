@@ -60,5 +60,5 @@ parameter DATA_WIDTH = 1
 
     genvar perData;
 
-    
+    PosEdge MakePosEdge(PosEdgeClock, SupplyDigit, Clock);
 endmodule
