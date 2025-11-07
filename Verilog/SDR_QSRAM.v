@@ -69,4 +69,16 @@ parameter DATA_WIDTH = 1
     and_B_to_A(AndedOfEdgeClock_Enable,SupplyDigit,BufferedEnable,PosEdgeClock);
 
     DecodeAddress #(.ADDR_WIDTH( ADDR_WIDTH)) DecodeEnable(DecodedEnable,2`b10,AndedOfEdgeClock_Enable, Address);
+
+    generate
+
+        for(perDecoded=0; perDecoded < $pow(2,ADDR_WIDTH);perDecoded = perDecoded + 1)
+
+        begin:Check_ DecodedRead
+
+            and_B_to_A DecodeRead(DecodedRead[perDecoded], 2`b10, DecodedEnable[perDecoded], Read);
+
+        end
+
+    endgenerate
 endmodule
