@@ -68,5 +68,5 @@ parameter DATA_WIDTH = 1
 
     and_B_to_A(AndedOfEdgeClock_Enable,SupplyDigit,BufferedEnable,PosEdgeClock);
 
-    
+    DecodeAddress #(.ADDR_WIDTH( ADDR_WIDTH)) DecodeEnable(DecodedEnable,2`b10,AndedOfEdgeClock_Enable, Address);
 endmodule
