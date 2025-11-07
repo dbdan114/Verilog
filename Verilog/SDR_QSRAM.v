@@ -94,4 +94,26 @@ parameter DATA_WIDTH = 1
 
     endgenerate
 
+    generate
+
+        for(perDecoded=0; perDecoded < $pow(2,ADDR_WIDTH);perDecoded = perDecoded + 1)
+
+        begin:Check_perDecoded
+
+        generate
+
+            for(perData=0; perData< DATA_WIDTH; perData = perData + 1)
+
+            begin:Check_perData
+
+                CellOfQSRAM MakeSDR_QSRAM(inoutData[perData], DecodedRead[perDecoded], inoutData[perData], DecodedWrite[perDecoded], Refresh);
+
+            end
+
+        endgenerate
+
+        end
+
+    endgenerate
+    
 endmodule
