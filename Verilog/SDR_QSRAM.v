@@ -81,4 +81,17 @@ parameter DATA_WIDTH = 1
         end
 
     endgenerate
+
+    generate
+
+        for(perDecoded=0; perDecoded < $pow(2,ADDR_WIDTH);perDecoded = perDecoded + 1)
+
+        begin:Check_ DecodedWrite
+
+            and_B_to_A DecodeWrite(DecodedWrite[perDecoded], 2`b10 ,DecodedEnable[perDecoded], Write);
+
+        end
+
+    endgenerate
+
 endmodule
