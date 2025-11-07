@@ -25,4 +25,6 @@ module CellOfQSRAM
 
   _nmos InsertRefreshing(DataToWrite, DataToRefresh, RefreshEdge);
   _nmos InsertWriting(DataToWrite, PreDataToWrite, WriteEdge);
+
+  DifferentialQBit SaveToLatch(DataToWrite,LatchOfQSRAM);
 endmodule
