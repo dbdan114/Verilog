@@ -24,6 +24,22 @@ parameter DATA_WIDTH = 1
 
 );
 
+    
+    reg [DATA_WIDTH - 1 : 0] inoutData;
+
+    tri [ADDR_WIDTH - 1 : 0] Address;
+
+    tri Clock;
+
+    tri Enable;
+
+    tri Read;
+
+    tri Write;
+
+    tri Refresh;
+
+    
     tri PosEdgeClock;
 
     tri BufferedEnable
