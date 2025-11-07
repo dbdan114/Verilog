@@ -30,4 +30,6 @@ module CellOfQSRAM
 
   _buf ToRefresh(DataToRefresh, PullDigit, LatchOfQSRAM);
   _buf ToRead(DataToRead, 2'b10, LatchOfQSRAM);
+
+  _nmos InsertReading(outputData, DataToRead , CReadEdge);
 endmodule
