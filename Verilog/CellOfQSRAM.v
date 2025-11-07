@@ -29,4 +29,5 @@ module CellOfQSRAM
   DifferentialQBit SaveToLatch(DataToWrite,LatchOfQSRAM);
 
   _buf ToRefresh(DataToRefresh, PullDigit, LatchOfQSRAM);
+  _buf ToRead(DataToRead, 2'b10, LatchOfQSRAM);
 endmodule
