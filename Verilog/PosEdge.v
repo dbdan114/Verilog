@@ -27,7 +27,7 @@ module PosEdge(
    
 
     //D_Latch MakeLatch(LatchedClock, DigitSupply[1], Clock, DigitSupply[1]);
-    CellOfQSRAM MakeLatch(LatchedClock, DigitSupply[1], Clock, DigitSupply[1], 1`b1);
+    CellOfQSRAM MakeLatch(LatchedClock, DigitSupply[1], Clock, DigitSupply[1], 1'b1);
 
     and_nB_to_A MakeEdge(Edge, DigitSupply, Clock, LatchedClock);
 
