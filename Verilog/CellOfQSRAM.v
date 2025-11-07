@@ -24,5 +24,5 @@ module CellOfQSRAM
   
   _buf MakeInputToSupplyStrength(PreDataToWrite,SupplyDigit,inputData);
 
-  _nmos InsertWriting(DataToWrite, PreDataToWrite, WriteEdge);
+  _nmos InsertRefreshing(DataToWrite, DataToRefresh, RefreshEdge);
 endmodule
