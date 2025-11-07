@@ -24,4 +24,25 @@ parameter DATA_WIDTH = 1
 
 );
 
+    tri PosEdgeClock;
+
+    tri BufferedEnable
+
+    tri AndedOfEdgeClock_Enable;
+
+ 
+
+    tri [$pow(2,ADDR_WIDTH) - 1:0] DecodedEnable;
+
+    tri [$pow(2,ADDR_WIDTH) - 1:0] DecodedRead;
+
+    tri [$pow(2,ADDR_WIDTH) - 1:0] DecodedWrite;
+
+ 
+
+    genvar perDecoded;
+
+    genvar perData;
+
+    
 endmodule
