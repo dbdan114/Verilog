@@ -18,6 +18,9 @@ module CellOfQSRAM
 
   tri PreDataToWrite;
   tri DataToWrite;
+  tri LatchOfDRAM;
+  tri DataToRead;
+  tri DataToRefresh;
   
   _buf MakeInputToSupplyStrength(PreDataToWrite,SupplyDigit,inputData);
 
