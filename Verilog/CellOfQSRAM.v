@@ -18,7 +18,7 @@ module CellOfQSRAM
 
   tri PreDataToWrite;
   tri DataToWrite;
-  tri LatchOfDRAM;
+  tri LatchOfQSRAM;
   tri DataToRead;
   tri DataToRefresh;
   
