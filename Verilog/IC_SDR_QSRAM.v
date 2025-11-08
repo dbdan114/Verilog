@@ -25,3 +25,4 @@ parameter DATA_WIDTH = 9
     input Clock100M
 
 );
+endmodule 
