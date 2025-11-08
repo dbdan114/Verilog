@@ -22,7 +22,7 @@ parameter DATA_WIDTH = 9
 
     input Refresh,
 
-    input Clock100M
+    input Clock100MhzP
 
 );
 endmodule 
