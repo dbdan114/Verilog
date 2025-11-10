@@ -50,5 +50,11 @@ parameter DATA_WIDTH = 9
 
     tri Clock100MhzN;
 
-    
+    OscilateFromXtalDDR MakeClock100Hz
+    (
+        Crystal50Mhz1,
+        Crystal50Mhz2,
+        Clock100MhzP,
+        Clock100MhzN
+    );
 endmodule 
