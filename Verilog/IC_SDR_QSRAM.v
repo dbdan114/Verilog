@@ -46,5 +46,9 @@ parameter DATA_WIDTH = 9
 
     tri Crystal50Mhz2;
 
+    tri Clock100MhzP;
+
+    tri Clock100MhzN;
+
     
 endmodule 
