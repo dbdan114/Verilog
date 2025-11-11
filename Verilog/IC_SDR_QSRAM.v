@@ -54,7 +54,7 @@ parameter DATA_WIDTH = 9
 
     
     
-    OscilateFromXtalDDR MakeClock100Hz
+    OscilateFromXtalDDR MakeClock100Mhz
     (
         Crystal50Mhz1,
         Crystal50Mhz2,
