@@ -2,7 +2,7 @@
 
 module IC_SDR_QSRAM #(
 
-parameter ADDR_WIDTH = 30
+parameter ADDR_WIDTH = 33
 
 parameter DATA_WIDTH = 9
 
