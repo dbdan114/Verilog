@@ -6,7 +6,7 @@ parameter INPUT_WIDTH = 1
     input [INPUT_WIDTH-1:0] inputData
     );
     tri outputData;
-    tri [1:0] DigitSupply[1];
+    tri [1:0] DigitSupply;
     tri [INPUT_WIDTH-1:0] inputData;
     
     tri  [INPUT_WIDTH:0] Temp;
