@@ -52,7 +52,9 @@ parameter DATA_WIDTH = 9
 
     tri Clock100MhzN;
 
+    tri VplusForPowerLNA;
     
+    tri VminusForPowerLNA;
     
     OscilateFromXtalDDR MakeClock100Mhz
     (
@@ -61,4 +63,10 @@ parameter DATA_WIDTH = 9
         Clock100MhzP,
         Clock100MhzN
     );
+
+    MakeVoltPN GetVpnForPowerLNA
+    (
+      VplusForPowerLNA,
+    );
+
 endmodule 
