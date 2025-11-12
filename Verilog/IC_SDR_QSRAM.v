@@ -67,6 +67,7 @@ parameter DATA_WIDTH = 9
     MakeVoltPN GetVpnForPowerLNA
     (
       VplusForPowerLNA,
+      VminusForPowerLNA
     );
 
 endmodule 
