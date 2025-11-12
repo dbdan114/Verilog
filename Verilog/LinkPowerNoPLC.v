@@ -17,8 +17,8 @@ module LinkPowerNoPLC
     Clock100MhzP,
     Clock100MhzN
   );
-  MakeVoltPN GetVpnForPowerLNA
+  MakeVoltPN GetV_pnForPowerLNA
   (
-    VplusForPowerLNA,
-    VminusForPowerLNA
+    V_plusForPowerLNA,
+    V_minusForPowerLNA
   );
