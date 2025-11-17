@@ -11,8 +11,8 @@ module LinkPowerNoPLC
   tri Clock100MhzP;
   tri Clock100MhzN;
   
-  tri VplusForPowerLNA;
-  tri VminusForPowerLNA;
+  tri VplusForSplitRadio;
+  tri VminusForSplitRadio;
 
   tri ToSplitRadio;
  
@@ -35,5 +35,12 @@ module LinkPowerNoPLC
     ToSplitRadio,
     1'b1
   );
-  
+  module SplitRadio
+(
+  input V_Plus,
+  input Receive,
+  output ReceivedRadio,
+  output ReceivedWire,
+  input V_Minus
+);
 endmodule
