@@ -19,8 +19,8 @@ module LinkPowerNoPLC
   );
   MakeVoltPN GetV_pnForPowerLNA
   (
-    V_plusForPowerLNA,
-    V_minusForPowerLNA
+    VplusForPowerLNA,
+    VminusForPowerLNA
   );
 
 endmodule
