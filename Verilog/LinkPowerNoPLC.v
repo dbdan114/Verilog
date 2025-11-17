@@ -1,3 +1,4 @@
+`include "DigitSupply.vh"
 
 module LinkPowerNoPLC
 (
