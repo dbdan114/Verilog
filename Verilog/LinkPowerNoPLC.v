@@ -28,5 +28,12 @@ module LinkPowerNoPLC
     VplusForPowerLNA,
     VminusForPowerLNA
   );
-
+  PowerLNA GetRawPower
+  (
+    ToSplitRadio,
+    1'b1,
+    ToSplitRadio,
+    1'b1
+  );
+  
 endmodule
