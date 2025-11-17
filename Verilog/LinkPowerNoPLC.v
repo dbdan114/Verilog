@@ -4,6 +4,9 @@ module LinkPowerNoPLC
   input Crystal50Mhz1,
   input Crystal50Mhz2
 );
+  tri Crystal50Mhz1;
+  tri Crystal50Mhz2;
+  
   tri Clock100MhzP;
   tri Clock100MhzN;
   
