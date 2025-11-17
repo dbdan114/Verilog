@@ -3,9 +3,9 @@
 module SplitRadio
 (
   input V_Plus,
-  input Receive,
-  output ReceivedRadio,
-  output ReceivedWire,
+  inout Receive,
+  inout ReceivedRadio,
+  inout ReceivedWire,
   input V_Minus
 );
   tri V_Plus;
