@@ -15,7 +15,10 @@ module LinkPowerNoPLC
   tri VminusForSplitRadio;
 
   tri ToSplitRadio;
- 
+
+  tri Received1236;
+  tri Received4578;
+  
   OscilateFromXtalDDR MakeClock100Mhz
   (
     Crystal50Mhz1,
@@ -35,12 +38,12 @@ module LinkPowerNoPLC
     ToSplitRadio,
     1'b1
   );
-  module SplitRadio
-(
-  input V_Plus,
-  input Receive,
-  output ReceivedRadio,
-  output ReceivedWire,
-  input V_Minus
-);
+  SplitRadio MakeTwoSignal
+  (
+    V_Plus,
+    ToSplitRadio,
+    Received1236,
+    Received4578,
+    V_Minus
+  );
 endmodule
