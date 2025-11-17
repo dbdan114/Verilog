@@ -1,8 +1,8 @@
 
 module LinkPowerNoPLC
 (
-  input Clock100MhzP,
-  input Clock100MhzN
+  input Crystal50Mhz1,
+  input Crystal50Mhz2
 );
   tri Clock100MhzP;
   tri Clock100MhzN;
