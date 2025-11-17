@@ -22,3 +22,5 @@ module LinkPowerNoPLC
     V_plusForPowerLNA,
     V_minusForPowerLNA
   );
+
+endmodule
