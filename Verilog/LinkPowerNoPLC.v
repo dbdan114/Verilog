@@ -40,10 +40,10 @@ module LinkPowerNoPLC
   );
   SplitRadio MakeTwoSignal
   (
-    V_Plus,
+    VplusForPowerLNA,
     ToSplitRadio,
     Received1236,
     Received4578,
-    V_Minus
+    VminusForPowerLNA
   );
 endmodule
