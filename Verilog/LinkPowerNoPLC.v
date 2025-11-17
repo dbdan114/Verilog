@@ -13,6 +13,8 @@ module LinkPowerNoPLC
   
   tri VplusForPowerLNA;
   tri VminusForPowerLNA;
+
+  tri ToSplitRadio;
  
   OscilateFromXtalDDR MakeClock100Mhz
   (
