@@ -17,7 +17,7 @@ module LinkPowerNoPLC
   tri ToSplitRadio;
 
   tri Received1236;
-  tri Received4578;
+  tri Received5478;
   
   OscilateFromXtalDDR MakeClock100Mhz
   (
@@ -43,7 +43,7 @@ module LinkPowerNoPLC
     VplusForPowerLNA,
     ToSplitRadio,
     Received1236,
-    Received4578,
+    Received5478,
     VminusForPowerLNA
   );
 endmodule
