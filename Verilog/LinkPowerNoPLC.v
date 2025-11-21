@@ -26,10 +26,10 @@ module LinkPowerNoPLC
     Clock100MhzP,
     Clock100MhzN
   );
-  MakeVoltPN GetV_pnForPowerLNA
+  MakeVoltPN GetV_pnForSplitRadio
   (
-    VplusForPowerLNA,
-    VminusForPowerLNA
+    VplusForSplitRadio,
+    VminusForSplitRadio
   );
   PowerLNA GetRawPower
   (
@@ -40,10 +40,10 @@ module LinkPowerNoPLC
   );
   SplitRadio MakeTwoSignal
   (
-    VplusForPowerLNA,
+    VplusForSplitRadio,
     ToSplitRadio,
     Received1236,
     Received5478,
-    VminusForPowerLNA
+    VminusForSplitRadio
   );
 endmodule
