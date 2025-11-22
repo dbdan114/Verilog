@@ -16,8 +16,8 @@ module LinkPowerNoPLC
 
   tri ToSplitRadio;
 
-  tri Received1236;
-  tri Received5478;
+  tri TIA_568B1236;
+  tri TIA_568B5478;
   
   OscilateFromXtalDDR MakeClock100Mhz
   (
@@ -42,8 +42,9 @@ module LinkPowerNoPLC
   (
     VplusForSplitRadio,
     ToSplitRadio,
-    Received1236,
-    Received5478,
+    TIA_568B1236,
+    TIA_568B5478,
     VminusForSplitRadio
   );
+  IC_SDR_QSRAM.v
 endmodule
