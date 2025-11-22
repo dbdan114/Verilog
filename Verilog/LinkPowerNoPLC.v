@@ -18,7 +18,12 @@ module LinkPowerNoPLC
 
   tri TIA_568B1236;
   tri TIA_568B5478;
+
+  tri TIA_568B12;
+  tri TIA_568B36;
   
+  tri TIA_568B54;
+  tri TIA_568B78;
   OscilateFromXtalDDR MakeClock100Mhz
   (
     Crystal50Mhz1,
@@ -46,5 +51,18 @@ module LinkPowerNoPLC
     TIA_568B5478,
     VminusForSplitRadio
   );
-  IC_SDR_QSRAM.v
+  PostLNA Check12and36
+  (
+    TIA_568B1236,
+    TIA_568B12,
+    TIA_568B36,
+    TIA_568B1236
+  );
+  PostLNA Check54and78
+  (
+    TIA_568B5478,
+    TIA_568B54,
+    TIA_568B78,
+    TIA_568B5478
+  );
 endmodule
