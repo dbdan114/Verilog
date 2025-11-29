@@ -21,9 +21,12 @@ module LinkPowerNoPLC
 
   tri TIA_568B12;
   tri TIA_568B36;
+  tri TIA_568B12To36;
   
   tri TIA_568B54;
   tri TIA_568B78;
+  tri TIA_568B54To78;
+  
   OscilateFromXtalDDR MakeClock100Mhz
   (
     Crystal50Mhz1,
