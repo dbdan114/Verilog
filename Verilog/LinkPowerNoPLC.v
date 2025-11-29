@@ -26,6 +26,12 @@ module LinkPowerNoPLC
   tri TIA_568B54;
   tri TIA_568B78;
   tri TIA_568B54To78;
+
+  tri VplusFor1236;
+  tri VminusFor1236;
+
+  tri VplusFor5478;
+  tri VminusFor5478;
   
   OscilateFromXtalDDR MakeClock100Mhz
   (
@@ -68,4 +74,15 @@ module LinkPowerNoPLC
     TIA_568B78,
     TIA_568B5478
   );
+  MakeVoltPN GetV_pnForSplitRadio
+  (
+    VplusFor1236,
+    VminusFor1236
+  );
+  MakeVoltPN GetV_pnForSplitRadio
+  (
+    VplusFor5478,
+    VminusFor5478
+  );
+  
 endmodule
