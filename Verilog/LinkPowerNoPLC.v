@@ -108,7 +108,7 @@ module LinkPowerNoPLC
     Clock100MhzP,
     VminusFor5478
   );
-  OpAmpSEO Rediect54To78
+  OpAmpSEO Redirect54To78
   (
     VplusFor5478,
     Clock100MhzP,
