@@ -116,5 +116,9 @@ module LinkPowerNoPLC
     TIA_568B54To78,
     VminusFor5478
   );
-  
+  DifferentialQBit
+  (
+    Vss,
+    TIA_568B54To78
+  );
 endmodule
