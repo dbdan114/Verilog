@@ -74,12 +74,12 @@ module LinkPowerNoPLC
     TIA_568B78,
     TIA_568B5478
   );
-  MakeVoltPN GetV_pnForSplitRadio
+  MakeVoltPN GetV_pnForOpAmpSEO1236
   (
     VplusFor1236,
     VminusFor1236
   );
-  MakeVoltPN GetV_pnForSplitRadio
+  MakeVoltPN GetV_pnForOpAmpSEO5478
   (
     VplusFor5478,
     VminusFor5478
