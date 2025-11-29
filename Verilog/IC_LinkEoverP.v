@@ -27,11 +27,11 @@ module IC_LinkEoverP
   tri TIA_568B78;
   tri TIA_568B54To78;
 
-  tri VplusFor1236;
-  tri VminusFor1236;
+  tri VplusForSEO1236;
+  tri VminusForSEO1236;
 
-  tri VplusFor5478;
-  tri VminusFor5478;
+  tri VplusForSEO5478;
+  tri VminusForSEO5478;
   
   OscilateFromXtalDDR MakeClock100Mhz
   (
@@ -76,45 +76,45 @@ module IC_LinkEoverP
   );
   MakeVoltPN GetV_pnForOpAmpSEO1236
   (
-    VplusFor1236,
-    VminusFor1236
+    VplusForSEO1236,
+    VminusForSEO1236
   );
   MakeVoltPN GetV_pnForOpAmpSEO5478
   (
-    VplusFor5478,
-    VminusFor5478
+    VplusForSEO5478,
+    VminusForSEO5478
   );
   OpAmpSEO Make12To36
   (
-    VplusFor1236,
+    VplusForSEO1236,
     Clock100MhzP,
     TIA_568B12To36,
     TIA_568B12,
-    VminusFor1236
+    VminusForSEO1236
   );
   OpAmpSEO Redirect12To36
   (
-    VplusFor1236,
+    VplusForSEO1236,
     TIA_568B12To36,
     TIA_568B36,
     Clock100MhzP,
-    VminusFor1236
+    VminusForSEO1236
   );
   OpAmpSEO Make54To78
   (
-    VplusFor5478,
+    VplusForSEO5478,
     TIA_568B54,
     TIA_568B54To78,
     Clock100MhzP,
-    VminusFor5478
+    VminusForSEO5478
   );
   OpAmpSEO Redirect54To78
   (
-    VplusFor5478,
+    VplusForSEO5478,
     Clock100MhzP,
     TIA_568B78,
     TIA_568B54To78,
-    VminusFor5478
+    VminusForSEO5478
   );
   DifferentialQBit
   (
