@@ -20,8 +20,12 @@ SDR_QSRAM 모듈을
 IC_LinkEoverP.v 파일은 
 IC_SDR_QSRAM 모듈의 전원부인
 LinkPowerNoPLC 모듈을 
-약간 변경해서 AC 전원부와
-NIC를 연결하는 IC를 만든
+약간 변경해서 전원부와
+NIC를 연결해서 전원 위에 
+1포트 이더넷을 제공해서 다른
+같은 AC 전원을 공유하는 다른
+IC_LinkEoverP 모듈들과
+통신할 수 있는 IC를 만든
 파일입니다. 아직 미완성입니다.
 
 나머지 파일은 
