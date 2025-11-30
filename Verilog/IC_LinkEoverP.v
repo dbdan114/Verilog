@@ -32,6 +32,12 @@ module IC_LinkEoverP
 
   tri VplusForSEO5478;
   tri VminusForSEO5478;
+
+  tri VplusForDO1236;
+  tri VminusForDO1236;
+
+  tri VplusForDO5478;
+  tri VminusForDO5478;
   
   OscilateFromXtalDDR MakeClock100Mhz
   (
@@ -120,5 +126,15 @@ module IC_LinkEoverP
   (
     Vss,
     TIA_568B54To78
+  );
+  MakeVoltPN GetV_pnForOpAmpDO1236
+  (
+    VplusForDO1236,
+    VminusForDO1236
+  );
+  MakeVoltPN GetV_pnForOpAmpDO5478
+  (
+    VplusForDO5478,
+    VminusForDO5478
   );
 endmodule
