@@ -122,7 +122,7 @@ module IC_LinkEoverP
     TIA_568B54To78,
     VminusForSEO5478
   );
-  DifferentialQBit
+  DifferentialQBit Correct54To78
   (
     Vss,
     TIA_568B54To78
