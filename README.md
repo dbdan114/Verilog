@@ -22,7 +22,7 @@ IC_SDR_QSRAM 모듈의 전원부인
 LinkPowerNoPLC 모듈을 
 약간 변경해서 전원부와
 NIC를 연결해서 전원 위에 
-1포트 이더넷을 제공해서 다른
+1포트 이더넷을 제공해서 
 같은 AC 전원을 공유하는 다른
 IC_LinkEoverP 모듈들과
 통신할 수 있는 IC를 만든
