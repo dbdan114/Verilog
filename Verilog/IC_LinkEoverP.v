@@ -25,7 +25,6 @@ module IC_LinkEoverP
   tri TIA_568B7;
   tri TIA_568B8;
   
-  
   tri Clock100MhzP;
   tri Clock100MhzN;
   
@@ -153,6 +152,42 @@ module IC_LinkEoverP
   MakeVoltPN GetV_pnForOpAmpDO5478
   (
     VplusForDO5478,
+    VminusForDO5478
+  );
+  OpAmpDO DecodeDO12
+  (
+    VplusForDO1236,
+    TIA_568B12,
+    TIA_568B1,
+    TIA_568B2,
+    Vss,
+    VminusForDO1236
+  );
+  OpAmpDO DecodeDO36
+  (
+    VplusForDO1236,
+    TIA_568B36,
+    TIA_568B3,
+    TIA_568B6,
+    Vss,
+    VminusForDO1236
+  );
+  OpAmpDO DecodeDO54
+  (
+    VplusForDO5478,
+    TIA_568B54,
+    TIA_568B5,
+    TIA_568B4,
+    Vss,
+    VminusForDO5478
+  );
+  OpAmpDO DecodeDO78
+  (
+    VplusForDO5478,
+    TIA_568B78,
+    TIA_568B7,
+    TIA_568B8,
+    Vss,
     VminusForDO5478
   );
 endmodule
