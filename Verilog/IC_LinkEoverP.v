@@ -3,10 +3,28 @@
 module IC_LinkEoverP
 (
   input Crystal50Mhz1,
-  input Crystal50Mhz2
+  input Crystal50Mhz2,
+  inout TIA_568B1,
+  inout TIA_568B2,
+  inout TIA_568B3,
+  inout TIA_568B6,
+  inout TIA_568B5,
+  inout TIA_568B4,
+  inout TIA_568B7,
+  inout TIA_568B8
 );
   tri Crystal50Mhz1;
   tri Crystal50Mhz2;
+
+  tri TIA_568B1;
+  tri TIA_568B2;
+  tri TIA_568B3;
+  tri TIA_568B6;
+  tri TIA_568B5;
+  tri TIA_568B4;
+  tri TIA_568B7;
+  tri TIA_568B8;
+  
   
   tri Clock100MhzP;
   tri Clock100MhzN;
