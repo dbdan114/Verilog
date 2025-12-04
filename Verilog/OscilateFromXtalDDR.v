@@ -27,6 +27,13 @@ module OscilateFromXtalDDR(
     );
     DifferentialQBit Rectify(North,South);
     
-    _buf(ClockP,PullDigit,North);
-    _buf(ClockN,PullDigit,South);
+    OpAmpDO MakeClockPN
+    (
+      Vplus,
+      North,
+      ClockP,
+      ClockN,
+      South,
+      Vminus
+    );
 endmodule
