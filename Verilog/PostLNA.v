@@ -12,8 +12,11 @@ module PostLNA
   tri InnerReceive;
   tri InnerTransmit;
   tri OuterTransmit;
+
+  tri TempVss;
   
-  DifferentialQBit FetchVss(Vss, OuterReceive);
+  DifferentialQBit CorrectTempVss(Vss, TempVss);
+  DifferentialQBit FetchVss(TempVss, OuterReceive);
   DifferentialQBit FetchOuterReceive(OuterReceive, InnerReceive);
   DifferentialQBit FetchInnerReceive(InnerReceive, InnerTransmit);
   DifferentialQBit FetchInnerTransmit(InnerTransmit, OuterTransmit);
