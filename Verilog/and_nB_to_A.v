@@ -10,7 +10,7 @@ module and_nB_to_A(
     tri [1:0] DigitSupply;
     tri A;
 
-    tri nB;
+    tri B;
    
 
     _pmos For0(outputData,A, nB);
