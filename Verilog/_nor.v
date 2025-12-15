@@ -10,7 +10,7 @@ parameter INPUT_WIDTH = 1
     tri [INPUT_WIDTH-1:0] inputData;
     
     tri  [INPUT_WIDTH:0] Temp;
-    assign Temp[0]=DigitSupply[1];
+    assign Temp[0]=DigitSupply[0];
     genvar Index;
     generate
         for(Index=0; Index < INPUT_WIDTH; Index = Index + 1)
