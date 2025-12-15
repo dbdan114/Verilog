@@ -4,7 +4,7 @@ module and_nB_to_A(
     input [1:0] DigitSupply,
     input A,
 
-    input nB
+    input B
     );
     wire outputData;
     tri [1:0] DigitSupply;
