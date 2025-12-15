@@ -13,7 +13,7 @@ module and_nB_to_A(
     tri B;
    
 
-    _pmos For0(outputData,A, nB);
-    _nmos For1(outputData,DigitSupply[0], nB);
+    _pmos For0(outputData,A, B);
+    _nmos For1(outputData,DigitSupply[0], B);
     
 endmodule
