@@ -16,6 +16,9 @@ DifferentialQBit 모듈을
 SDR_QSRAM 모듈을
 상용화하려고 만든 파일입니다.
 아직 미완성입니다.
+2025-12-22에 ChatGPT에 질문해서
+일단 완성했습니다.
+오류가 있을 수도 있습니다.
 
 IC_LinkEoverP.v 파일은 
 IC_SDR_QSRAM 모듈의 전원부인
