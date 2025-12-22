@@ -41,7 +41,18 @@ module IC_SDR_QSRAM
     Crystal50Mhz2
   );
   
-    
-    
-
+  SDR_QSRAM MakeMemory
+  #(
+    .ADDR_WIDTH(ADDR_WIDTH)
+    .DATA_WIDTH(DATA_WIDTH)
+  )
+  (
+    inoutData,
+    Address,
+    Clock,
+    Enable,
+    Read,
+    Write,
+    Refresh
+  );
 endmodule 
