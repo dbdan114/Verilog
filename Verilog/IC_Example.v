@@ -1,10 +1,18 @@
 `include "DigitSupply.vh"
 
 module IC_Example (
+  input wire Crystal50Mhz1,
+  input wire Crystal50Mhz2
     /* To Write Your Signal*/
 
     /* To Write Your Signal*/
 );
+  LinkPowerNoPLC MakePLC
+  (
+    Crystal50Mhz1,
+    Crystal50Mhz2
+  );
+    /*
     tri QBitToRead;
     tri QBitToWrite;
     tri WrtingToQBit;
@@ -23,6 +31,7 @@ module IC_Example (
     GetQDREdge MakeEdge(QBitToWrite, QRAM_DDRClockP, QRAM_DDRClockN);
     GetQDREdge MakeEdge(AddressQBit, QRAM_DDRClockP, QRAM_DDRClockN);
     DifferentialQBit ClockAddressQBitToQDR(QRAM_DDRClockN,QRAM_DDRClockP);
+    */
     /* To Write Your HDL Code*/
     
   
