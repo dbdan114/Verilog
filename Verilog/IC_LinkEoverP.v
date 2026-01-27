@@ -190,4 +190,5 @@ module IC_LinkEoverP
     Vss,
     VminusForDO5478
   );
+  trireg StablizeSupplyOfBit = rVdd;
 endmodule
