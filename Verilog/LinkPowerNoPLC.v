@@ -126,4 +126,5 @@ module LinkPowerNoPLC
     Vss,
     TIA_568B12To36
   );
+  trireg StablizeSupplyOfBit = rVdd;
 endmodule
