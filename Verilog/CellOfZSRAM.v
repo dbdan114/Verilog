@@ -19,7 +19,10 @@ module CellOfZSRAM //Cell Of Zero Second RAM
 
   tri FromInputData;
 
-  tri LinkedFromInputData;
+  tri DataWest;
+  tri DataNorth;
+  tri DataSouth;
+  tri DataEast;
 
   LinkPowerNoPLC LinkLEOS
   (
@@ -37,6 +40,6 @@ module CellOfZSRAM //Cell Of Zero Second RAM
   DifferentialQBit LinkFromInputData
   (
     FromInputData,
-    LinkedFromInputData
+    DataWest
   );
 endmodule 
