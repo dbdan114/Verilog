@@ -1,6 +1,6 @@
 `include "DigitSupply.vh"
 
-module CellOfZSRAM
+module CellOfZSRAM //Cell Of Zero Second RAM
 (
   output outputData,
   input ReadEdge,
@@ -11,5 +11,8 @@ module CellOfZSRAM
   tri ReadEdge;
   tri inputData;
   tri WriteEdge;
+
+  tri FromInputData;
+
   
 endmodule 
