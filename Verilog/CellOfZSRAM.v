@@ -42,4 +42,29 @@ module CellOfZSRAM //Cell Of Zero Second RAM
     FromInputData,
     DataWest
   );
+  _nmos WestToNorth
+  (
+    DataNorth,
+    DataWest,
+    Vdd
+  );
+  _nmos WestToSouth
+  (
+    DataSouth,
+    DataWest,
+    Vdd
+  );
+  _buf NorthToSouth
+  (
+    DataSouth,
+    PullDigit,
+    DataNorth
+  );
+  _buf SouthToNorth
+  (
+    DataNorth,
+    PullDigit,
+    DataSouth
+  );
+  
 endmodule 
