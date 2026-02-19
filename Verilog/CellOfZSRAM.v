@@ -17,7 +17,8 @@ module CellOfZSRAM //Cell Of Zero Second RAM
   tri Crystal50Mhz1;
   tri Crystal50Mhz2;
 
-  tri FromInputData;
+  tri FromInputData1;
+  tri FromInputData2;
 
   tri DataWest;
   tri DataNorth;
@@ -32,14 +33,21 @@ module CellOfZSRAM //Cell Of Zero Second RAM
   
   _nmos FetchInputData
   (
-    FromInputData,
+    FromInputData1,
     inputData,
     WriteEdge
   );
 
+  _buf AmplifyFromInputData1
+  (
+    FromInputData2,
+    SupplyDigit,
+    FromInputData1
+  );
+  
   DifferentialQBit LinkFromInputData
   (
-    FromInputData,
+    FromInputData2,
     DataWest
   );
   _nmos WestToNorth
