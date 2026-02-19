@@ -14,10 +14,18 @@ module CellOfZSRAM //Cell Of Zero Second RAM
 
   tri FromInputData;
 
+  tri LinkedFromInputData;
+
   _nmos FetchInputData
   (
     FromInputData,
     inputData,
     WriteEdge
+  );
+
+  DifferentialQBit LinkFromInputData
+  (
+    FromInputData,
+    LinkedFromInputData
   );
 endmodule 
