@@ -21,6 +21,12 @@ module CellOfZSRAM //Cell Of Zero Second RAM
 
   tri LinkedFromInputData;
 
+  LinkPowerNoPLC LinkLEOS
+  (
+    Crystal50Mhz1,
+    Crystal50Mhz2
+  );
+  
   _nmos FetchInputData
   (
     FromInputData,
