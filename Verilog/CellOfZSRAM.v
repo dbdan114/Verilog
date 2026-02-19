@@ -14,5 +14,10 @@ module CellOfZSRAM //Cell Of Zero Second RAM
 
   tri FromInputData;
 
-  
+  _nmos FetchInputData
+  (
+    FromInputData,
+    inputData,
+    WriteEdge
+  );
 endmodule 
