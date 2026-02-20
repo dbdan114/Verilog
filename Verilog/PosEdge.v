@@ -32,9 +32,9 @@ module PosEdge
   CellOfZSRAM MakeLatch
   (
     LatchedClock,
-    DigitSupply[1],
+    Vdd,
     Clock,
-    DigitSupply[1]
+    Vdd
   );
     
   and_nB_to_A MakeEdge(Edge, DigitSupply, Clock, LatchedClock);
