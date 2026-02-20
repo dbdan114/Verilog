@@ -95,4 +95,10 @@ module CellOfZSRAM //Cell Of Zero Second RAM
     DataEast1,
     DataEast2
   );
+  _nmos PutDataEast2
+  (
+    outputData,
+    DataEast2,
+    ReadEdge
+  );
 endmodule 
