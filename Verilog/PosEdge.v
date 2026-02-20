@@ -13,23 +13,31 @@
  //   input inputData,
   //  input WriteEdge
   //  );
-module PosEdge(
-    output Edge,
-
-    input [1:0] DigitSupply,
-    input Clock
-    );
-    wire Edge;
-    tri Clock;
+module PosEdge
+(
+  output Edge,
+  input [1:0] DigitSupply,
+  input Clock
+);
+  wire Edge;
+  tri [1:0] DigitSupply;
+  tri Clock;
     
-    tri LatchedClock;
+  tri LatchedClock;
 
    
 
     //D_Latch MakeLatch(LatchedClock, DigitSupply[1], Clock, DigitSupply[1]);
-    CellOfQSRAM MakeLatch(LatchedClock, DigitSupply[1], Clock, DigitSupply[1], 1'b1);
-
-    and_nB_to_A MakeEdge(Edge, DigitSupply, Clock, LatchedClock);
+    //CellOfQSRAM MakeLatch(LatchedClock, DigitSupply[1], Clock, DigitSupply[1], 1'b1);
+  CellOfZSRAM MakeLatch
+  (
+    LatchedClock,
+    DigitSupply[1],
+    Clock,
+    DigitSupply[1]
+  );
+    
+  and_nB_to_A MakeEdge(Edge, DigitSupply, Clock, LatchedClock);
 
  
 
