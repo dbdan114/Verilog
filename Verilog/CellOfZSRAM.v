@@ -20,6 +20,8 @@ module CellOfZSRAM //Cell Of Zero Second RAM
   tri DataSouth;
   tri DataEast;
 
+  tri DataEast1;
+
   LinkPowerNoPLC LinkLEOS
   (
     Crystal50Mhz1,
@@ -69,5 +71,22 @@ module CellOfZSRAM //Cell Of Zero Second RAM
     PullDigit,
     DataSouth
   );
-  
+  _nmos NorthToEast
+  (
+    DataEast,
+    DataNorth,
+    Vdd
+  );
+  _nmos SouthToEast
+  (
+    DataEast,
+    DataSouth,
+    Vdd
+  );
+  _buf AmplifyDataEast
+  (
+    DataEast1,
+    SupplyDigit,
+    DataEast
+  );
 endmodule 
