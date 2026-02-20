@@ -24,6 +24,8 @@ module PosEdge
   tri Clock;
     
   tri LatchedClock;
+  
+  tri LatchedClock1;
 
    
 
@@ -36,9 +38,20 @@ module PosEdge
     Clock,
     Vdd
   );
-    
-  and_nB_to_A MakeEdge(Edge, DigitSupply, Clock, LatchedClock);
 
- 
+  _buf EqualizeLatchedClock
+  (
+    LatchedClock1,
+    DigitSupply,
+    LatchedClock
+  );
+  
+  and_nB_to_A MakeEdge
+  (
+    Edge,
+    DigitSupply,
+    Clock,
+    LatchedClock
+  );
 
 endmodule
