@@ -4,7 +4,7 @@
 
 module SDR_SPS_DRAM #(
 
-parameter ADDR_WIDTH = 1
+parameter ADDR_WIDTH = 1,
 
 parameter DATA_WIDTH = 1
 
