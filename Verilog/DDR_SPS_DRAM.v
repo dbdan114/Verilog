@@ -76,15 +76,15 @@ parameter DATA_WIDTH = 1
 
  
 
-    _pmos ChargeForrVss(ChargedPullDigit[0], PullDigit[0],1`b0);
+ _pmos ChargeForrVss(ChargedPullDigit[0], PullDigit[0],1'b0);
 
-    _nmos ChargeForrVdd(ChargedPullDigit[1], PullDigit[1],1`b1);
+ _nmos ChargeForrVdd(ChargedPullDigit[1], PullDigit[1],1'b1);
 
  
 
-    _pmos ChargeFor_Vss(ChargedSupplyDigit[0], SupplyDigit[0], 1`b0);
+ _pmos ChargeFor_Vss(ChargedSupplyDigit[0], SupplyDigit[0], 1'b0);
 
-    _nmos ChargeFor_Vdd(ChargedSupplyDigit[1], SupplyDigit[1], 1`b1);
+ _nmos ChargeFor_Vdd(ChargedSupplyDigit[1], SupplyDigit[1], 1'b1);
 
  
 
@@ -126,7 +126,7 @@ parameter DATA_WIDTH = 1
 
         begin:Check_ DecodedWrite
 
-            and_B_to_A DecodeWrite(DecodedWrite[perDecoded], {ChargedSupplyDigit[1], 1`b0} ,DecodedEnable[perDecoded], Write);
+         and_B_to_A DecodeWrite(DecodedWrite[perDecoded], {ChargedSupplyDigit[1], 1'b0} ,DecodedEnable[perDecoded], Write);
 
         end
 
