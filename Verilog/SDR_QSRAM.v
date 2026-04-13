@@ -76,7 +76,7 @@ parameter DATA_WIDTH = 1
 
         begin:Check_ DecodedRead
 
-            and_B_to_A DecodeRead(DecodedRead[perDecoded], 2`b10, DecodedEnable[perDecoded], Read);
+            and_B_to_A DecodeRead(DecodedRead[perDecoded], 2'b10, DecodedEnable[perDecoded], Read);
 
         end
 
