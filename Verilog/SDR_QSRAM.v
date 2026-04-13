@@ -88,7 +88,7 @@ parameter DATA_WIDTH = 1
 
         begin:Check_ DecodedWrite
 
-            and_B_to_A DecodeWrite(DecodedWrite[perDecoded], 2`b10 ,DecodedEnable[perDecoded], Write);
+            and_B_to_A DecodeWrite(DecodedWrite[perDecoded], 2'b10 ,DecodedEnable[perDecoded], Write);
 
         end
 
