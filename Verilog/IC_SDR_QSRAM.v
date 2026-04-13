@@ -43,7 +43,7 @@ module IC_SDR_QSRAM
   
   SDR_QSRAM MakeMemory
   #(
-    .ADDR_WIDTH(ADDR_WIDTH)
+    .ADDR_WIDTH(ADDR_WIDTH),
     .DATA_WIDTH(DATA_WIDTH)
   )
   (
