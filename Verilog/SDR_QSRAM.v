@@ -64,7 +64,7 @@ parameter DATA_WIDTH = 1
     
     PosEdge MakePosEdge(PosEdgeClock, SupplyDigit, Clock);
 
-    and_B_to_A(BufferedEnable, SupplyDigit, 1`b1, Enable);
+    and_B_to_A(BufferedEnable, SupplyDigit, 1'b1, Enable);
 
     and_B_to_A(AndedOfEdgeClock_Enable,SupplyDigit,BufferedEnable,PosEdgeClock);
 
