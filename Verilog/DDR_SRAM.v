@@ -58,7 +58,7 @@ parameter DATA_WIDTH = 1
 
  
 
-    tri BufferedEnable
+    tri BufferedEnable;
 
     tri AndedOfEdgeClock_Enable;
 
