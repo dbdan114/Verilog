@@ -8,7 +8,7 @@ module GetQDREdge
   tri ClockP;
   tri ClockN;
 
-  DiffenentialQbit ClockPtoEdge(ClockP,QDREdge);
-  DiffenentialQbit ClockNtoEdge(ClockN,QDREdge);
+  DiffenentialQBit ClockPtoEdge(ClockP,QDREdge);
+  DiffenentialQBit ClockNtoEdge(ClockN,QDREdge);
   
 endmodule
