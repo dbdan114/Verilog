@@ -4,7 +4,7 @@
 
 module SDR_SRAM #(
 
-parameter ADDR_WIDTH = 1
+parameter ADDR_WIDTH = 1,
 
 parameter DATA_WIDTH = 1
 
