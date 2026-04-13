@@ -32,7 +32,7 @@ module D_Latch(
 
     or_B_to_A MakeChangedWriteEdge0(ChangedWriteEdge0, SupplyDigit, WriteEdge, SupplyDigit[0]);
 
-    and_nB_to_A MakeChangedWriteEdge1(ChangedWriteEdge1, SupplyDigit, ChangedWriteEdge1, SupplyDigit[0]);
+    and_nB_to_A MakeChangedWriteEdge1(ChangedWriteEdge1, SupplyDigit, ChangedWriteEdge0, SupplyDigit[0]);
     _nmos WestToNorth(DataNorth,DataWest, ChangedWriteEdge1);//SupplyDigit[1]);
     _nmos WestToSouth(DataSouth,DataWest, ChangedWriteEdge1);//SupplyDigit[1]);
     _buf NorthToSouth(DataSouth,PullDigit,DataNorth);
