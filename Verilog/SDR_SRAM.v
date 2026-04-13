@@ -66,9 +66,9 @@ parameter DATA_WIDTH = 1
 
    
 
-    _pmos ChargeFor0(ChargedPullDigit[0], PullDigit[0],1`b0);
+ _pmos ChargeFor0(ChargedPullDigit[0], PullDigit[0],1'b0);
 
-    _nmos ChargeFor1(ChargedPullDigit[1], PullDigit[1],1`b1);
+ _nmos ChargeFor1(ChargedPullDigit[1], PullDigit[1],1'b1);
 
  
 
@@ -78,7 +78,7 @@ parameter DATA_WIDTH = 1
 
  
 
-    PosEdge MakePosEdge(PosEdgeClock, 2`b10, Clock);
+ PosEdge MakePosEdge(PosEdgeClock, 2'b10, Clock);
 
  
 
