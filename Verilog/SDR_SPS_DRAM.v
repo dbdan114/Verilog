@@ -70,15 +70,15 @@ parameter DATA_WIDTH = 1
 
    
 
-    _pmos ChargeForrVss(ChargedPullDigit[0], PullDigit[0],1`b0);
+ _pmos ChargeForrVss(ChargedPullDigit[0], PullDigit[0],1'b0);
 
-    _nmos ChargeForrVdd(ChargedPullDigit[1], PullDigit[1],1`b1);
+ _nmos ChargeForrVdd(ChargedPullDigit[1], PullDigit[1],1'b1);
 
  
 
-    _pmos ChargeFor_Vss(ChargedSupplyDigit[0], SupplyDigit[0], 1`b0);
+ _pmos ChargeFor_Vss(ChargedSupplyDigit[0], SupplyDigit[0], 1'b0);
 
-    _nmos ChargeFor_Vdd(ChargedSupplyDigit[1], SupplyDigit[1], 1`b1);
+ _nmos ChargeFor_Vdd(ChargedSupplyDigit[1], SupplyDigit[1], 1'b1);
 
  
 
@@ -86,13 +86,13 @@ parameter DATA_WIDTH = 1
 
  
 
-    and_B_to_A(BufferedEnable, ChargedSupplyDigit, 1`b1, Enable);
+ and_B_to_A(BufferedEnable, ChargedSupplyDigit, 1'b1, Enable);
 
     and_B_to_A(AndedOfEdgeClock_Enable,ChargedSupplyDigit,BufferedEnable,PosEdgeClock);
 
  
 
-    DecodeAddress #(.ADDR_WIDTH( ADDR_WIDTH)) DecodeEnable(DecodedEnable,2`b10,AndedOfEdgeClock_Enable, Address);
+ DecodeAddress #(.ADDR_WIDTH( ADDR_WIDTH)) DecodeEnable(DecodedEnable,2'b10,AndedOfEdgeClock_Enable, Address);
 
  
 
@@ -102,7 +102,7 @@ parameter DATA_WIDTH = 1
 
         begin:Check_ DecodedRead
 
-            and_B_to_A DecodeRead(DecodedRead[perDecoded], 2`b10, DecodedEnable[perDecoded], Read);
+         and_B_to_A DecodeRead(DecodedRead[perDecoded], 2'b10, DecodedEnable[perDecoded], Read);
 
         end
 
@@ -116,7 +116,7 @@ parameter DATA_WIDTH = 1
 
         begin:Check_ DecodedWrite
 
-            and_B_to_A DecodeWrite(DecodedWrite[perDecoded], 2`b10 ,DecodedEnable[perDecoded], Write);
+         and_B_to_A DecodeWrite(DecodedWrite[perDecoded], 2'b10 ,DecodedEnable[perDecoded], Write);
 
         end
 
