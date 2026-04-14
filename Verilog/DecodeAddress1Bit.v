@@ -38,9 +38,9 @@ module DecodeAddress1Bit(
 
    
 
-    and_ nB_to_A MakeFrom0(Decoded[0], DigitSupply, Compared, ToDecode);
+    and_nB_to_A MakeFrom0(Decoded[0], DigitSupply, Compared, ToDecode);
 
-    and_ B_to_A MakeFrom1(Decoded[1], DigitSupply, Compared, ToDecode);
+    and_B_to_A MakeFrom1(Decoded[1], DigitSupply, Compared, ToDecode);
 
     
 
