@@ -74,7 +74,8 @@ parameter DATA_WIDTH = 1
 
     tri [$pow(2,ADDR_WIDTH) - 1:0] DecodedWrite;
 
- 
+   genvar perDecoded;
+   genvar perData;
 
  _pmos ChargeForrVss(ChargedPullDigit[0], PullDigit[0],1'b0);
 
