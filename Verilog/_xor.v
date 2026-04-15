@@ -14,7 +14,7 @@ parameter INPUT_WIDTH = 1
     genvar Index;
     generate
         for(Index=0; Index < INPUT_WIDTH; Index = Index + 1)
-        begin:Place_ xor_B_to_A
+        begin:Place_xor_B_to_A
             xor_B_to_A Paste(Temp[Index+1],DigitSupply,Temp[Index],inputData[Index]);
         end
     endgenerate
