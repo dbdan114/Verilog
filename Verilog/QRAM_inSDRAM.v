@@ -37,7 +37,7 @@ module QRAM_inSDRAM (
     NegEdge MakeNegEdgeClockForData(NegEdgeClockForDataQBit, PullDigit, DDRClockP);
     
     or_B_to_A MakeDualEdgeClockForAddress(DualEdgeClockForAddressQbit, SupplyDigit, PosEdgeClockForAddressQbit, NegEdgeClockForAddressQbit);
-    or_B_to_A MakeDualEdgeClockForData(DualEdgeClockForDataQbit, SupplyDigit, PosEdgeClockForDataQBit, NegEdgeClockForDataQBit);
+    or_B_to_A MakeDualEdgeClockForData(DualEdgeClockForDataQBit, SupplyDigit, PosEdgeClockForDataQBit, NegEdgeClockForDataQBit);
 
     and_B_to_A MakeDualEdgeClockReadForDataQBit(DualEdgeClockReadForDataQBit, PullDigit, DualEdgeClockForDataQBit, Read);
     and_B_to_A MakeDualEdgeClockWriteForDataQBit(DualEdgeClockWriteForDataQBit, PullDigit, DualEdgeClockForDataQBit, Write);
