@@ -64,9 +64,9 @@ parameter DATA_WIDTH = 1
     
     PosEdge MakePosEdge(PosEdgeClock, SupplyDigit, Clock);
 
-    and_B_to_A(BufferedEnable, SupplyDigit, 1'b1, Enable);
+    and_B_to_A MakeBufferedEnable(BufferedEnable, SupplyDigit, 1'b1, Enable);
 
-    and_B_to_A(AndedOfEdgeClock_Enable,SupplyDigit,BufferedEnable,PosEdgeClock);
+    and_B_to_A MakeAndedOfEdgeClock_Enable(AndedOfEdgeClock_Enable,SupplyDigit,BufferedEnable,PosEdgeClock);
 
     DecodeAddress #(.ADDR_WIDTH( ADDR_WIDTH)) DecodeEnable(DecodedEnable,2'b10,AndedOfEdgeClock_Enable, Address);
 
