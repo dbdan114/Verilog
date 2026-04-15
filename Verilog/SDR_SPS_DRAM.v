@@ -86,9 +86,9 @@ parameter DATA_WIDTH = 1
 
  
 
- and_B_to_A(BufferedEnable, ChargedSupplyDigit, 1'b1, Enable);
+ and_B_to_A MakeBufferedEnable(BufferedEnable, ChargedSupplyDigit, 1'b1, Enable);
 
-    and_B_to_A(AndedOfEdgeClock_Enable,ChargedSupplyDigit,BufferedEnable,PosEdgeClock);
+ and_B_to_A MakeAndedOfEdgeClock_Enable(AndedOfEdgeClock_Enable,ChargedSupplyDigit,BufferedEnable,PosEdgeClock);
 
  
 
