@@ -41,11 +41,11 @@ module IC_SDR_QSRAM
     Crystal50Mhz2
   );
   
-  SDR_QSRAM MakeMemory
+  SDR_QSRAM 
   #(
     .ADDR_WIDTH(ADDR_WIDTH),
     .DATA_WIDTH(DATA_WIDTH)
-  )
+  ) MakeMemory
   (
     inoutData,
     Address,
