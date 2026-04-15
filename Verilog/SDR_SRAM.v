@@ -96,7 +96,7 @@ parameter DATA_WIDTH = 1
 
         for(perDecoded=0; perDecoded < $pow(2,ADDR_WIDTH);perDecoded = perDecoded + 1)
 
-        begin:Check_ DecodedRead
+        begin:Check_DecodedRead
 
             and_B_to_A DecodeRead(DecodedRead[perDecoded],ChargedSupplyDigit, DecodedEnable[perDecoded], Read);
 
@@ -110,7 +110,7 @@ generate
 
         for(perDecoded=0; perDecoded < $pow(2,ADDR_WIDTH);perDecoded = perDecoded + 1)
 
-        begin:Check_ DecodedWrite
+        begin:Check_DecodedWrite
 
             and_B_to_A DecodeWrite(DecodedWrite[perDecoded],ChargedSupplyDigit,DecodedEnable[perDecoded], Write);
 
