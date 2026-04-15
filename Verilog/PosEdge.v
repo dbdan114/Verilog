@@ -1,19 +1,5 @@
 `include "DigitSupply.vh"
-//module CellOfQSRAM
-//(
-//  output outputData,
-//  input ReadEdge,
-//  input inputData,
-//  input WriteEdge,
-//  input RefreshEdge
-    
-//);
-//module D_Latch(
- //   output outputData,
- //   input ReadEdge,
- //   input inputData,
-  //  input WriteEdge
-  //  );
+
 module PosEdge
 (
   output Edge,
