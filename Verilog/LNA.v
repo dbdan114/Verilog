@@ -7,7 +7,7 @@ module LNA
   inout Antenna
 );
   tri Receive;
-  tri EnaleReceive;
+  tri EnableReceive;
   tri Transmit;
   tri EnableTransmit;
   tri Antenna;
