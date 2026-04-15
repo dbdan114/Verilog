@@ -18,6 +18,6 @@ module LNA
   _nmos ChargeTransmit(TempTranmit, Transmit, EnableTransmit);
   DifferentialQBit TransmitTemp(TempTranmit, Antenna);
   DifferentialQBit ReceiveTemp(Antenna, TempReceive);
-  _nmos ChargeReceive(Receive, TempReceive, EnableTransmit);
+  _nmos ChargeReceive(Receive, TempReceive, EnableReceive);
 endmodule
   
