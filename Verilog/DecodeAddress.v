@@ -44,7 +44,7 @@ parameter ADDR_WIDTH = 1
 
             for(IndexBuffer =0; IndexBuffer < $pow(2, IndexToDecode+1); IndexBuffer = IndexBuffer + 1)
 
-            begin:Place_ DecodeAddress1Bit  //{1}  {2,3}  {4,5 6,7}  {8,9 10,11 12,13 14,15} ...
+            begin:Place_DecodeAddress1Bit  //{1}  {2,3}  {4,5 6,7}  {8,9 10,11 12,13 14,15} ...
 
                 DecodeAddress1Bit Paste(Buffer[$pow(2, IndexToDecode+1)+ IndexBuffer*2+1: $pow(2, IndexToDecode+1)+ IndexBuffer*2], DigitSupply, Buffer[$pow(2, IndexToDecode)+ IndexBuffer], ToDecode[(ADDR_WIDTH-1)-IndexToDecode]);
 
