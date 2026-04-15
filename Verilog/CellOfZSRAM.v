@@ -5,9 +5,7 @@ module CellOfZSRAM //Cell Of Zero Second RAM
   output outputData,
   input ReadEdge,
   input inputData,
-  input WriteEdge,
-  input Crystal50Mhz1,
-  input Crystal50Mhz2
+  input WriteEdge
 );
   tri outputData;
   tri ReadEdge;
@@ -25,11 +23,7 @@ module CellOfZSRAM //Cell Of Zero Second RAM
   tri DataEast1;
   tri DataEast2;
 
-  LinkPowerNoPLC LinkLEOS
-  (
-    Crystal50Mhz1,
-    Crystal50Mhz2
-  );
+  trireg RectifyVdd=Vdd;
   
   _nmos FetchInputData
   (
