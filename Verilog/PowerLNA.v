@@ -1,4 +1,4 @@
-
+⁶
 `include "DigitSupply.vh"
 
 module PowerLNA
@@ -16,10 +16,30 @@ module PowerLNA
 
   tri TempJunction;
   
-  PowerAntenna GetInOutSignal(TempJunction);
+  PowerAntenna GetInOutSignal
+  (
+    TempJunction
+  );
 
-  
+  DifferentialQBit BufferTempJunction1
+  (
+    TempJunction,
+    TempJunction1
+  );
 
-  LNA CheckSignal(Receive, EnaleReceive, Transmit, EnableTransmit, TempJunction); 
+  DifferentialQBit BufferTempJunction2
+  (
+    TempJunction1,
+    TempJunction2
+  );
+
+  LNA CheckSignal
+  (
+    Receive, 
+    EnaleReceive, 
+    Transmit, 
+    EnableTransmit, 
+    TempJunction2
+  ); 
   
 endmodule  
