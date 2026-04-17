@@ -3,7 +3,12 @@
 SystemVerilog를 배우던 경험으로
 만든 파일들입니다. 오류가 있을 수도 있습니다.
 IC_SDR_QSRAM.v 완성 이후에 iverilog로
-검사해서 오류를 수정하겠습니다.
+검사해서 오류를 수정하겠습니다. 
+오류를 조금 수정하기는 했는데,
+SystemVerilog에서만 쓸 수 있는
+$pow()를 사용하고 있어서,
+안정함을 위해 dbdan114/SystemVerilog로
+코드를 옮기고 있습니다.
 
 IC_Example.v 파일은 
 표준 문서를 읽지 않은 채로
