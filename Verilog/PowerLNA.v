@@ -1,4 +1,3 @@
-⁶
 `include "DigitSupply.vh"
 
 module PowerLNA
