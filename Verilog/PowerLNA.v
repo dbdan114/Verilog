@@ -16,13 +16,9 @@ module PowerLNA
 
   tri TempJunction;
   
-  DifferentialQBit MakeSupplySignal0(SupplyDigit[1], SupplyDigit[1]);
-  DifferentialQBit MakeSupplySignal1(SupplyDigit[1], SupplyDigit[0]);
-  
-  DifferentialQBit MakePullSignal1(SupplyDigit[0], PullDigit[1]);
-  DifferentialQBit MakePullSignal0(SupplyDigit[0], PullDigit[0]);
+  PowerAntenna GetInOutSignal(TempJunction);
 
-  DifferentialQBit GetInOutSignal(TempJunction, SupplyDigit[1]);
+  
 
   LNA CheckSignal(Receive, EnaleReceive, Transmit, EnableTransmit, TempJunction); 
   
